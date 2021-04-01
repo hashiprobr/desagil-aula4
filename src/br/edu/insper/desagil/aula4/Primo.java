@@ -17,7 +17,7 @@ public class Primo {
 				}
 				d++;
 			}
-			
+
 			if (!temDivisor) {
 				total += 1;
 			}
@@ -27,4 +27,5 @@ public class Primo {
 
 		return total;
 	}
+
 }
