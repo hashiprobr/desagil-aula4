@@ -1,18 +1,17 @@
 package br.edu.insper.desagil.aula4;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cumulativo {
 
 	public List<Integer> calcula(List<Integer> v) {
 		List<Integer> c = new ArrayList<>();
 
-		for (int i = 0; i < v.size(); i++) {
-			int s = 0;
-			for (int j = 0; j <= i; j++) {
-				s += v.get(j);
-			}
-			c.add(s);
+		c.add(v.get(0));
+
+		for (int i = 1; i < v.size(); i++) {
+			c.add(c.get(i - 1) + v.get(i));
 		}
 
 		return c;

@@ -3,24 +3,28 @@ package br.edu.insper.desagil.aula4;
 public class Calculadora {
 
 	public double executa(int a, int b, char op) {
-		double r, s;
+		double r;
 
-		if (op == '+') {
+		switch (op) {
+		case '+':
 			r = a + b;
-		} else if (op == '-') {
+			break;
+		case '-':
 			r = a - b;
-		} else if (op == '*') {
+			break;
+		case '*':
 			r = a * b;
-		} else {
+			break;
+		default:
 			if (b == 0) {
 				r = 0.0;
 			} else {
 				r = (double) a / b;
 			}
+			break;
 		}
 
 		return r;
-		s++;
 	}
 
 }
